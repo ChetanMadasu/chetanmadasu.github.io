@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>analysis.Physics package &mdash; Analysis 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="analysis.Physics.ElectricDipole package" href="analysis.Physics.ElectricDipole.html" />
+    <link rel="prev" title="analysis package" href="analysis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Analysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">analysis</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="analysis.html">analysis package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="analysis.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">analysis.Physics package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.Images">analysis.Images module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.fits">analysis.fits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.numberOfAtoms">analysis.numberOfAtoms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.picoMatTools">analysis.picoMatTools module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.rigol">analysis.rigol module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.sigma">analysis.sigma module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.spectrum">analysis.spectrum module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis.html#module-analysis.tripodTools">analysis.tripodTools module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Analysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">analysis</a> &raquo;</li>
+        
+          <li><a href="analysis.html">analysis package</a> &raquo;</li>
+        
+      <li>analysis.Physics package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/analysis.Physics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-analysis.Physics">
+<span id="analysis-physics-package"></span><h1>analysis.Physics package<a class="headerlink" href="#module-analysis.Physics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analysis.Physics.ElectricDipole.html">analysis.Physics.ElectricDipole package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis.Physics.ElectricDipole.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.Physics.ElectricDipole.html#module-analysis.Physics.ElectricDipole.dipole">analysis.Physics.ElectricDipole.dipole module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.Physics.ElectricDipole.html#module-analysis.Physics.ElectricDipole.polarizability">analysis.Physics.ElectricDipole.polarizability module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-analysis.Physics.OBS">
+<span id="analysis-physics-obs-module"></span><h2>analysis.Physics.OBS module<a class="headerlink" href="#module-analysis.Physics.OBS" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="analysis.Physics.OBS.BStoDS">
+<code class="sig-prename descclassname">analysis.Physics.OBS.</code><code class="sig-name descname">BStoDS</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#BStoDS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.BStoDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change of basis matrix from bare state basis {0, 1, 2, 3} to dressed basis {D1, D2, B1, B2}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="analysis.Physics.OBS.OBSolve">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.OBS.</code><code class="sig-name descname">OBSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">decayMatrix</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#OBSolve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.OBSolve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.OBS.OBSolve.Hamiltonian">
+<code class="sig-name descname">Hamiltonian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">H</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">HArgs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#OBSolve.Hamiltonian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.OBSolve.Hamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.OBS.OBSolve.Liovellian">
+<code class="sig-name descname">Liovellian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#OBSolve.Liovellian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.OBSolve.Liovellian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.OBS.OBSolve.solve">
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">initialCondition</span></em>, <em class="sig-param"><span class="n">max_step</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">dense_output</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#OBSolve.solve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.OBSolve.solve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.OBS.OBSolve.solveFiniteT">
+<code class="sig-name descname">solveFiniteT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">initialCondition</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">Na</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/OBS.html#OBSolve.solveFiniteT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.OBS.OBSolve.solveFiniteT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-analysis.Physics.allenDeviation">
+<span id="analysis-physics-allendeviation-module"></span><h2>analysis.Physics.allenDeviation module<a class="headerlink" href="#module-analysis.Physics.allenDeviation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="analysis.Physics.allenDeviation.TSeries">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.allenDeviation.</code><code class="sig-name descname">TSeries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataPath</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">f0</span></em>, <em class="sig-param"><span class="n">Amplitude</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.fracFreq">
+<code class="sig-name descname">fracFreq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.fracFreq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.fracFreq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.timeDiff">
+<code class="sig-name descname">timeDiff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.timeDiff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.timeDiff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.allenVar">
+<code class="sig-name descname">allenVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.allenVar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.allenVar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.allenDev">
+<code class="sig-name descname">allenDev</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.allenDev"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.allenDev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.oAllenVar">
+<code class="sig-name descname">oAllenVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.oAllenVar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.oAllenVar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.allenDeviation.TSeries.oAllenDev">
+<code class="sig-name descname">oAllenDev</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/allenDeviation.html#TSeries.oAllenDev"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.allenDeviation.TSeries.oAllenDev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-analysis.Physics.basisMatrices">
+<span id="analysis-physics-basismatrices-module"></span><h2>analysis.Physics.basisMatrices module<a class="headerlink" href="#module-analysis.Physics.basisMatrices" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="analysis.Physics.basisMatrices.PauliBasis">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.basisMatrices.</code><code class="sig-name descname">PauliBasis</code><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#PauliBasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.PauliBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.PauliBasis.matrices">
+<code class="sig-name descname">matrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#PauliBasis.matrices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.PauliBasis.matrices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.PauliBasis.decompose">
+<code class="sig-name descname">decompose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#PauliBasis.decompose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.PauliBasis.decompose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.basisMatrices.</code><code class="sig-name descname">GellMannBasis</code><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.matrices">
+<code class="sig-name descname">matrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.matrices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.matrices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.structureConstants">
+<code class="sig-name descname">structureConstants</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.structureConstants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.structureConstants" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.structureConstant">
+<code class="sig-name descname">structureConstant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">j</span></em>, <em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.structureConstant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.structureConstant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.decompose2">
+<code class="sig-name descname">decompose2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.decompose2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.decompose2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.decompose">
+<code class="sig-name descname">decompose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.decompose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.decompose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.basisMatrices.GellMannBasis.compose">
+<code class="sig-name descname">compose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decomposition</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/basisMatrices.html#GellMannBasis.compose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.basisMatrices.GellMannBasis.compose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-analysis.Physics.createAndDestroy">
+<span id="analysis-physics-createanddestroy-module"></span><h2>analysis.Physics.createAndDestroy module<a class="headerlink" href="#module-analysis.Physics.createAndDestroy" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="analysis.Physics.createAndDestroy.a">
+<code class="sig-prename descclassname">analysis.Physics.createAndDestroy.</code><code class="sig-name descname">a</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/createAndDestroy.html#a"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.createAndDestroy.a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of bosonic destruction operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – destroy boson at n in an N state Fock space</p></li>
+<li><p><strong>N</strong> – dimensions of the Fock space, default 5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of a of shape (N, N) in Fock basis, {<span class="math notranslate nohighlight">\(|n_1, n_2, n_3, ..., N\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.createAndDestroy.a_dag">
+<code class="sig-prename descclassname">analysis.Physics.createAndDestroy.</code><code class="sig-name descname">a_dag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/createAndDestroy.html#a_dag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.createAndDestroy.a_dag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of bosonic creation operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – create a boson at n in an N state Fock space</p></li>
+<li><p><strong>N</strong> – dimensions of the Fock space, default 5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of a of shape (N, N) in Fock basis, {<span class="math notranslate nohighlight">\(|n_1, n_2, n_3, ..., N\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-analysis.Physics.ehrenfest">
+<span id="analysis-physics-ehrenfest-module"></span><h2>analysis.Physics.ehrenfest module<a class="headerlink" href="#module-analysis.Physics.ehrenfest" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.omegaConstant">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">omegaConstant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#omegaConstant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.omegaConstant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.omegaRamp">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">omegaRamp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">t_ramp</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#omegaRamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.omegaRamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.omegaGaussian">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">omegaGaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">amp</span></em>, <em class="sig-param"><span class="n">Tc</span></em>, <em class="sig-param"><span class="n">sigma</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#omegaGaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.omegaGaussian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.omegaDoubleGaussian">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">omegaDoubleGaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">amp</span></em>, <em class="sig-param"><span class="n">Tc1</span></em>, <em class="sig-param"><span class="n">Tc2</span></em>, <em class="sig-param"><span class="n">sigma</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#omegaDoubleGaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.omegaDoubleGaussian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.Map">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">Map</code><span class="sig-paren">(</span><em class="sig-param">fun</em>, <em class="sig-param">vec</em>, <em class="sig-param">args</em>, <em class="sig-param">dtype=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#Map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.Map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps a function to a vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fun</strong> – function to be mapped</p></li>
+<li><p><strong>vec</strong> – 1d-array, the vector to be mapped to the function</p></li>
+<li><p><strong>args</strong> – tuple, secondary arguments to the function</p></li>
+<li><p><strong>dtype</strong> – Default numpy.float, the data type of the elements of the array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d-array with elements of given dtype mapped by the specified function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">EhrenfestSU2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">omega1</span></em>, <em class="sig-param"><span class="n">omega2</span></em>, <em class="sig-param"><span class="n">omega3</span></em>, <em class="sig-param"><span class="n">omega1_args</span></em>, <em class="sig-param"><span class="n">omega2_args</span></em>, <em class="sig-param"><span class="n">omega3_args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2.mixingAngles">
+<code class="sig-name descname">mixingAngles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2.mixingAngles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2.mixingAngles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2.evolve">
+<code class="sig-name descname">evolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">y0</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">p_x</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">p_y</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">d1</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">d2</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">d3</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2.evolve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2.evolve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2.bareStatePop">
+<code class="sig-name descname">bareStatePop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2.bareStatePop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2.bareStatePop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2.bareStatePop2">
+<code class="sig-name descname">bareStatePop2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">result</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2.bareStatePop2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2.bareStatePop2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU2.spatialDistributions">
+<code class="sig-name descname">spatialDistributions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU2.spatialDistributions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU2.spatialDistributions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="analysis.Physics.ehrenfest.Tripod">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">Tripod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">omega1</span></em>, <em class="sig-param"><span class="n">omega2</span></em>, <em class="sig-param"><span class="n">omega3</span></em>, <em class="sig-param"><span class="n">omega1_args</span></em>, <em class="sig-param"><span class="n">omega2_args</span></em>, <em class="sig-param"><span class="n">omega3_args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#Tripod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.Tripod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.Tripod.mixingAngles">
+<code class="sig-name descname">mixingAngles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#Tripod.mixingAngles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.Tripod.mixingAngles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.mixingAngles">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">mixingAngles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">omega_1</span></em>, <em class="sig-param"><span class="n">omega_2</span></em>, <em class="sig-param"><span class="n">omega_3</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#mixingAngles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.mixingAngles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.mixingAnglesSU2">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">mixingAnglesSU2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">omega_1</span></em>, <em class="sig-param"><span class="n">omega_2</span></em>, <em class="sig-param"><span class="n">omega_3</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#mixingAnglesSU2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.mixingAnglesSU2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.SU2_GaugeField">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">SU2_GaugeField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em>, <em class="sig-param"><span class="n">beta</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#SU2_GaugeField"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.SU2_GaugeField" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.SU2_ScalarTerm">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">SU2_ScalarTerm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em>, <em class="sig-param"><span class="n">beta</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#SU2_ScalarTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.SU2_ScalarTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.SU3_GaugeField">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">SU3_GaugeField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theta_l</span></em>, <em class="sig-param"><span class="n">phi_l</span></em>, <em class="sig-param"><span class="n">theta_r</span></em>, <em class="sig-param"><span class="n">phi_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#SU3_GaugeField"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.SU3_GaugeField" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.ehrenfest.SU3_ScalarTerm">
+<code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">SU3_ScalarTerm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theta_l</span></em>, <em class="sig-param"><span class="n">phi_l</span></em>, <em class="sig-param"><span class="n">theta_r</span></em>, <em class="sig-param"><span class="n">phi_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#SU3_ScalarTerm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.SU3_ScalarTerm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU3">
+<em class="property">class </em><code class="sig-prename descclassname">analysis.Physics.ehrenfest.</code><code class="sig-name descname">EhrenfestSU3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Tripod_l</span></em>, <em class="sig-param"><span class="n">Tripod_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU3"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU3.evolve">
+<code class="sig-name descname">evolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">y0</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">p_x</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">p_y</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU3.evolve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU3.evolve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU3.bareStatePop">
+<code class="sig-name descname">bareStatePop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU3.bareStatePop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU3.bareStatePop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="analysis.Physics.ehrenfest.EhrenfestSU3.bareStatePop2">
+<code class="sig-name descname">bareStatePop2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">result</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/ehrenfest.html#EhrenfestSU3.bareStatePop2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.ehrenfest.EhrenfestSU3.bareStatePop2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="analysis-physics-run-ehren-mp-module">
+<h2>analysis.Physics.run_ehren_mp module<a class="headerlink" href="#analysis-physics-run-ehren-mp-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-analysis.Physics.spinInDickeBasis">
+<span id="analysis-physics-spinindickebasis-module"></span><h2>analysis.Physics.spinInDickeBasis module<a class="headerlink" href="#module-analysis.Physics.spinInDickeBasis" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.S_m">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_m</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#S_m"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.S_m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of ladder lowering operator for spin, in general angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S^-\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.S_p">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_p</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#S_p"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.S_p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of ladder raising operator for spin, in general angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S^+\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.S_x">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_x</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#S_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.S_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of x component of the operator for spin, in general angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_x\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.S_y">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#S_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.S_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of y component of the operator for spin, in general angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_y\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.S_z">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#S_z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.S_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of z component of the operator for spin, in general angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_z\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.Spin">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">Spin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#Spin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.Spin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of quantum mechanical spin, in general angular momentum, s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – int or half int, the spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of sparse matrices corresponding to <span class="math notranslate nohighlight">\(S_x, S_y, S_z\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="analysis.Physics.spinInDickeBasis.SpinAngularMomenta">
+<code class="sig-prename descclassname">analysis.Physics.spinInDickeBasis.</code><code class="sig-name descname">SpinAngularMomenta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">I</span></em>, <em class="sig-param"><span class="n">L</span></em>, <em class="sig-param"><span class="n">S</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/Physics/spinInDickeBasis.html#SpinAngularMomenta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.Physics.spinInDickeBasis.SpinAngularMomenta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns angular momenta operators of a state given I, L, S in the tensor product basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>I</strong> – nuclear spin quantum number of the atomic state</p></li>
+<li><p><strong>L</strong> – orbital angular momentum quantum number</p></li>
+<li><p><strong>S</strong> – spin quantum number of the state</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of angular momenta, <span class="math notranslate nohighlight">\(((I_x, I_y, I_z), (L_x, L_y, L_z), (S_x, S_y, S_z))\)</span>
+(each a tuple of components as sparse matrices) in tensor product space.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis.Physics.ElectricDipole.html" class="btn btn-neutral float-right" title="analysis.Physics.ElectricDipole package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="analysis.html" class="btn btn-neutral float-left" title="analysis package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Chetan Sriram Madasu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
