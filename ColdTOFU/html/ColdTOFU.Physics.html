@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ColdTOFU.Physics package &mdash; ColdTOFU 0.0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ColdTOFU package" href="ColdTOFU.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ColdTOFU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ColdTOFU</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ColdTOFU.html">ColdTOFU package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="ColdTOFU.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ColdTOFU.Physics package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.AndorSifReader">ColdTOFU.AndorSifReader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.Images">ColdTOFU.Images module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.fits">ColdTOFU.fits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.jupyterTools">ColdTOFU.jupyterTools module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.numberOfAtoms">ColdTOFU.numberOfAtoms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.picoMatTools">ColdTOFU.picoMatTools module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.sigma">ColdTOFU.sigma module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU.spectrum">ColdTOFU.spectrum module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ColdTOFU.html#module-ColdTOFU">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ColdTOFU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">ColdTOFU</a> &raquo;</li>
+        
+          <li><a href="ColdTOFU.html">ColdTOFU package</a> &raquo;</li>
+        
+      <li>ColdTOFU.Physics package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ColdTOFU.Physics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="coldtofu-physics-package">
+<h1>ColdTOFU.Physics package<a class="headerlink" href="#coldtofu-physics-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ColdTOFU.Physics.allenDeviation">
+<span id="coldtofu-physics-allendeviation-module"></span><h2>ColdTOFU.Physics.allenDeviation module<a class="headerlink" href="#module-ColdTOFU.Physics.allenDeviation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Physics.allenDeviation.</code><code class="sig-name descname">TSeries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataPath</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">f0</span></em>, <em class="sig-param"><span class="n">Amplitude</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.allenDev">
+<code class="sig-name descname">allenDev</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.allenDev"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.allenDev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.allenVar">
+<code class="sig-name descname">allenVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.allenVar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.allenVar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.fracFreq">
+<code class="sig-name descname">fracFreq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.fracFreq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.fracFreq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.oAllenDev">
+<code class="sig-name descname">oAllenDev</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.oAllenDev"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.oAllenDev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.oAllenVar">
+<code class="sig-name descname">oAllenVar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.oAllenVar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.oAllenVar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.allenDeviation.TSeries.timeDiff">
+<code class="sig-name descname">timeDiff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/allenDeviation.html#TSeries.timeDiff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.allenDeviation.TSeries.timeDiff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.Physics.basisMatrices">
+<span id="coldtofu-physics-basismatrices-module"></span><h2>ColdTOFU.Physics.basisMatrices module<a class="headerlink" href="#module-ColdTOFU.Physics.basisMatrices" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Physics.basisMatrices.</code><code class="sig-name descname">GellMannBasis</code><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis.compose">
+<code class="sig-name descname">compose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decomposition</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis.compose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis.compose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis.decompose">
+<code class="sig-name descname">decompose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis.decompose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis.decompose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis.matrices">
+<code class="sig-name descname">matrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis.matrices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis.matrices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis.structureConstant">
+<code class="sig-name descname">structureConstant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">j</span></em>, <em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis.structureConstant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis.structureConstant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.GellMannBasis.structureConstants">
+<code class="sig-name descname">structureConstants</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#GellMannBasis.structureConstants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.GellMannBasis.structureConstants" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="ColdTOFU.Physics.basisMatrices.PauliBasis">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Physics.basisMatrices.</code><code class="sig-name descname">PauliBasis</code><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#PauliBasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.PauliBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent Pauli’s spin basis.</p>
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.PauliBasis.decompose">
+<code class="sig-name descname">decompose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#PauliBasis.decompose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.PauliBasis.decompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decomposes given non-singular <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix in the Pauli basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>A</strong> – <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix to be decomposed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of 4 components.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Physics.basisMatrices.PauliBasis.matrices">
+<code class="sig-name descname">matrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/basisMatrices.html#PauliBasis.matrices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.basisMatrices.PauliBasis.matrices" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of 4 <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices corresponding to <span class="math notranslate nohighlight">\(I_2, \sigma_x, \sigma_y, \sigma_z\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.Physics.createAndDestroy">
+<span id="coldtofu-physics-createanddestroy-module"></span><h2>ColdTOFU.Physics.createAndDestroy module<a class="headerlink" href="#module-ColdTOFU.Physics.createAndDestroy" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.Physics.createAndDestroy.a">
+<code class="sig-prename descclassname">ColdTOFU.Physics.createAndDestroy.</code><code class="sig-name descname">a</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/createAndDestroy.html#a"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.createAndDestroy.a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of bosonic destruction operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – destroy boson at n in an N state Fock space</p></li>
+<li><p><strong>N</strong> – dimensions of the Fock space, default 5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of a of shape (N, N) in Fock basis, {<span class="math notranslate nohighlight">\(|n_1, n_2, n_3, ..., N\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.createAndDestroy.a_dag">
+<code class="sig-prename descclassname">ColdTOFU.Physics.createAndDestroy.</code><code class="sig-name descname">a_dag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/createAndDestroy.html#a_dag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.createAndDestroy.a_dag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of bosonic creation operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – create a boson at n in an N state Fock space</p></li>
+<li><p><strong>N</strong> – dimensions of the Fock space, default 5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of a of shape (N, N) in Fock basis, {<span class="math notranslate nohighlight">\(|n_1, n_2, n_3, ..., N\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.Physics.spinInDickeBasis">
+<span id="coldtofu-physics-spinindickebasis-module"></span><h2>ColdTOFU.Physics.spinInDickeBasis module<a class="headerlink" href="#module-ColdTOFU.Physics.spinInDickeBasis" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.S_m">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_m</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#S_m"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.S_m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of ladder lowering operator for spin, in general, angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S^-\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.S_p">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_p</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#S_p"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.S_p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of ladder raising operator for spin, in general, angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S^+\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.S_x">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_x</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#S_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.S_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of x component of the operator for spin, in general, angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_x\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.S_y">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#S_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.S_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of y component of the operator for spin, in general, angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_y\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.S_z">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">S_z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#S_z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.S_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of z component of the operator for spin, in general, angular momentum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sparse matrix representation of <span class="math notranslate nohighlight">\(S_z\)</span> of shape (2s+1, 2s+1) in Dicke basis, {<span class="math notranslate nohighlight">\(|s, m_s\rangle\)</span>}.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.Spin">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">Spin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#Spin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.Spin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix representation of quantum mechanical spin, in general, angular momentum, s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – int or half int, the spin quantum number.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of sparse matrices corresponding to <span class="math notranslate nohighlight">\(S_x, S_y, S_z\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.Physics.spinInDickeBasis.SpinAngularMomenta">
+<code class="sig-prename descclassname">ColdTOFU.Physics.spinInDickeBasis.</code><code class="sig-name descname">SpinAngularMomenta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">I</span></em>, <em class="sig-param"><span class="n">L</span></em>, <em class="sig-param"><span class="n">S</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Physics/spinInDickeBasis.html#SpinAngularMomenta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Physics.spinInDickeBasis.SpinAngularMomenta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns angular momenta operators of a state given I, L, S in the tensor product basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>I</strong> – nuclear spin quantum number of the atomic state</p></li>
+<li><p><strong>L</strong> – orbital angular momentum quantum number</p></li>
+<li><p><strong>S</strong> – spin quantum number of the state</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of angular momenta, <span class="math notranslate nohighlight">\(((I_x, I_y, I_z), (L_x, L_y, L_z), (S_x, S_y, S_z))\)</span>
+(each a tuple of components of <span class="math notranslate nohighlight">\(\textbf{I}\otimes\textbf{L}\otimes\textbf{S}\)</span> as sparse matrices)
+in tensor product space.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.Physics">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ColdTOFU.Physics" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ColdTOFU.html" class="btn btn-neutral float-left" title="ColdTOFU package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Chetan Sriram Madasu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

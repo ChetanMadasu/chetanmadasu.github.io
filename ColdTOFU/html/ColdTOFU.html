@@ -1,0 +1,1358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ColdTOFU package &mdash; ColdTOFU 0.0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ColdTOFU.Physics package" href="ColdTOFU.Physics.html" />
+    <link rel="prev" title="ColdTOFU" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ColdTOFU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ColdTOFU</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ColdTOFU package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ColdTOFU.Physics.html">ColdTOFU.Physics package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.AndorSifReader">ColdTOFU.AndorSifReader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.Images">ColdTOFU.Images module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.fits">ColdTOFU.fits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.jupyterTools">ColdTOFU.jupyterTools module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.numberOfAtoms">ColdTOFU.numberOfAtoms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.picoMatTools">ColdTOFU.picoMatTools module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.sigma">ColdTOFU.sigma module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU.spectrum">ColdTOFU.spectrum module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ColdTOFU">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ColdTOFU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">ColdTOFU</a> &raquo;</li>
+        
+      <li>ColdTOFU package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ColdTOFU.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="coldtofu-package">
+<h1>ColdTOFU package<a class="headerlink" href="#coldtofu-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ColdTOFU.Physics.html">ColdTOFU.Physics package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#module-ColdTOFU.Physics.allenDeviation">ColdTOFU.Physics.allenDeviation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#module-ColdTOFU.Physics.basisMatrices">ColdTOFU.Physics.basisMatrices module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#module-ColdTOFU.Physics.createAndDestroy">ColdTOFU.Physics.createAndDestroy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#module-ColdTOFU.Physics.spinInDickeBasis">ColdTOFU.Physics.spinInDickeBasis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ColdTOFU.Physics.html#module-ColdTOFU.Physics">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ColdTOFU.AndorSifReader">
+<span id="coldtofu-andorsifreader-module"></span><h2>ColdTOFU.AndorSifReader module<a class="headerlink" href="#module-ColdTOFU.AndorSifReader" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.AndorSifReader.</code><code class="sig-name descname">AndorSifFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/AndorSifReader.html#AndorSifFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is main class to handle the reading of sif files. All the work is
+done in the constructor, the sif file is opened, data is read and the file
+is closed. This is adopted from <a class="reference external" href="https://github.com/ardiloot/AndorSifReader">https://github.com/ardiloot/AndorSifReader</a>
+with modifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> – str, Path to .sif file to read</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.signal">
+<code class="sig-name descname">signal</code><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.signal" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">_SifFrame</span></code>
+Instance of the <code class="xref py py-class docutils literal notranslate"><span class="pre">_SifFrame</span></code> helper class to store signal information.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.data">
+<code class="sig-name descname">data</code><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, Convenience property linking to signal.data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.props">
+<code class="sig-name descname">props</code><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.props" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict, Convenience property linking to signal.props.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ANTSIF_PROPS">
+<code class="sig-name descname">ANTSIF_PROPS</code><em class="property"> = ['Type', 'Active', 'Version', 'Time', 'FormattedTime', 'FileName', 'Temperature', 'UnstabalizedTemperature', 'Head', 'HeadModel', 'StoreType', 'DataType', 'SIDisplacement', 'SINumberSubFrames', 'PixelReadOutTime', 'TrackHeight', 'ReadPattern', 'ReadPatternFullName', 'ShutterDelay', 'CentreRow', 'RowOffset', 'Operation', 'Mode', 'ModeFullName', 'TriggerSource', 'TriggerSourceFullName', 'TriggerLevel', 'ExposureTime', 'Delay', 'IntegrationCycleTime', 'NumberIntegrations', 'KineticCycleTime', 'FlipX', 'FlipY', 'Clock', 'AClock', 'IOC', 'Frequency', 'NumberPulses', 'FrameTransferAcquisitionMode', 'BaselineClamp', 'PreScan', 'EMRealGain', 'BaselineOffset', 'SWVersion', 'SWVersionEx', 'MCP', 'Gain', 'VerticalClockAmp', 'VerticalShiftSpeed', 'OutputAmplifier', 'PreAmplifierGain', 'Serial', 'DetectorFormatX', 'DetectorFormatZ', 'NumberImages', 'NumberSubImages', 'SubImageHBin', 'SubImageVBin', 'SubImageLeft', 'SubImageRight', 'SubImageTop', 'SubImageBottom', 'Baseline', 'CCDLeft', 'CCDRight', 'CCDTop', 'CCDBottom', 'Sensitivity', 'DetectionWavelength', 'CountConvertMode', 'IsCountConvert', 'XAxisType', 'XAxisUnit', 'YAxisType', 'YAxisUnit', 'ZAxisType', 'ZAxisUnit', 'UserText', 'IsPhotonCountingEnabled', 'NumberThresholds', 'Threshold1', 'Threshold2', 'Threshold3', 'Threshold4', 'AveragingFilterMode', 'AveragingFactor', 'FrameCount', 'NoiseFilter', 'Threshold', 'TimeStamp']</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ANTSIF_PROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_32">
+<code class="sig-name descname">ATSIF_AT_32</code><em class="property"> = 1073741826</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_64">
+<code class="sig-name descname">ATSIF_AT_64</code><em class="property"> = 1073741828</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_8">
+<code class="sig-name descname">ATSIF_AT_8</code><em class="property"> = 1073741824</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U32">
+<code class="sig-name descname">ATSIF_AT_U32</code><em class="property"> = 1073741827</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U64">
+<code class="sig-name descname">ATSIF_AT_U64</code><em class="property"> = 1073741829</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U8">
+<code class="sig-name descname">ATSIF_AT_U8</code><em class="property"> = 1</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_AT_U8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Background">
+<code class="sig-name descname">ATSIF_Background</code><em class="property"> = 1073741826</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CONV">
+<code class="sig-name descname">ATSIF_CONV</code><em class="property"> = {1: &lt;class 'numpy.uint8'&gt;, 1073741824: &lt;class 'numpy.int8'&gt;, 1073741826: &lt;class 'numpy.int32'&gt;, 1073741827: &lt;class 'numpy.uint32'&gt;, 1073741828: &lt;class 'numpy.int64'&gt;, 1073741829: &lt;class 'numpy.uint64'&gt;, 1073741830: &lt;class 'float'&gt;, 1073741831: &lt;class 'numpy.float64'&gt;, 1073741832: &lt;function AndorSifFile.&lt;lambda&gt;&gt;}</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CONV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibX">
+<code class="sig-name descname">ATSIF_CalibX</code><em class="property"> = 1073741824</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibY">
+<code class="sig-name descname">ATSIF_CalibY</code><em class="property"> = 1073741825</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibZ">
+<code class="sig-name descname">ATSIF_CalibZ</code><em class="property"> = 1073741826</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_CalibZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Double">
+<code class="sig-name descname">ATSIF_Double</code><em class="property"> = 1073741831</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Double" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Float">
+<code class="sig-name descname">ATSIF_Float</code><em class="property"> = 1073741830</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Float" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Live">
+<code class="sig-name descname">ATSIF_Live</code><em class="property"> = 1073741827</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Live" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_ReadAll">
+<code class="sig-name descname">ATSIF_ReadAll</code><em class="property"> = 1073741824</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_ReadAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_ReadHeaderOnly">
+<code class="sig-name descname">ATSIF_ReadHeaderOnly</code><em class="property"> = 1073741825</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_ReadHeaderOnly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Reference">
+<code class="sig-name descname">ATSIF_Reference</code><em class="property"> = 1073741825</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Reference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Signal">
+<code class="sig-name descname">ATSIF_Signal</code><em class="property"> = 1073741824</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Signal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Source">
+<code class="sig-name descname">ATSIF_Source</code><em class="property"> = 1073741828</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_Source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_String">
+<code class="sig-name descname">ATSIF_String</code><em class="property"> = 1073741832</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.AndorSifFile.ATSIF_String" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id0">
+<em class="property">property </em><code class="sig-name descname">data</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id1">
+<em class="property">property </em><code class="sig-name descname">props</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="ColdTOFU.AndorSifReader.SifError">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.AndorSifReader.</code><code class="sig-name descname">SifError</code><a class="reference internal" href="_modules/ColdTOFU/AndorSifReader.html#SifError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is a helper class to handle error codes produced by SIFReaderSDK.</p>
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_DATA_NOT_PRESENT">
+<code class="sig-name descname">ATSIF_DATA_NOT_PRESENT</code><em class="property"> = 'ATSIF_DATA_NOT_PRESENT'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_DATA_NOT_PRESENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_FILE_ACCESS_ERROR">
+<code class="sig-name descname">ATSIF_FILE_ACCESS_ERROR</code><em class="property"> = 'ATSIF_FILE_ACCESS_ERROR'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_FILE_ACCESS_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_FILE_NOT_FOUND">
+<code class="sig-name descname">ATSIF_FILE_NOT_FOUND</code><em class="property"> = 'ATSIF_FILE_NOT_FOUND'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_FILE_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_NO_SIF_LOADED">
+<code class="sig-name descname">ATSIF_NO_SIF_LOADED</code><em class="property"> = 'ATSIF_NO_SIF_LOADED'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_NO_SIF_LOADED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P1INVALID">
+<code class="sig-name descname">ATSIF_P1INVALID</code><em class="property"> = 'ATSIF_P1INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P1INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P2INVALID">
+<code class="sig-name descname">ATSIF_P2INVALID</code><em class="property"> = 'ATSIF_P2INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P2INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P3INVALID">
+<code class="sig-name descname">ATSIF_P3INVALID</code><em class="property"> = 'ATSIF_P3INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P3INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P4INVALID">
+<code class="sig-name descname">ATSIF_P4INVALID</code><em class="property"> = 'ATSIF_P4INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P4INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P5INVALID">
+<code class="sig-name descname">ATSIF_P5INVALID</code><em class="property"> = 'ATSIF_P5INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P5INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P6INVALID">
+<code class="sig-name descname">ATSIF_P6INVALID</code><em class="property"> = 'ATSIF_P6INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P6INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P7INVALID">
+<code class="sig-name descname">ATSIF_P7INVALID</code><em class="property"> = 'ATSIF_P7INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P7INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_P8INVALID">
+<code class="sig-name descname">ATSIF_P8INVALID</code><em class="property"> = 'ATSIF_P8INVALID'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_P8INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_SIF_FORMAT_ERROR">
+<code class="sig-name descname">ATSIF_SIF_FORMAT_ERROR</code><em class="property"> = 'ATSIF_SIF_FORMAT_ERROR'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_SIF_FORMAT_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ATSIF_SUCCESS">
+<code class="sig-name descname">ATSIF_SUCCESS</code><em class="property"> = 'ATSIF_SUCCESS'</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ATSIF_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.AndorSifReader.SifError.ERROR_STR">
+<code class="sig-name descname">ERROR_STR</code><em class="property"> = {22002: 'ATSIF_SUCCESS', 22003: 'ATSIF_SIF_FORMAT_ERROR', 22004: 'ATSIF_NO_SIF_LOADED', 22005: 'ATSIF_FILE_NOT_FOUND', 22006: 'ATSIF_FILE_ACCESS_ERROR', 22007: 'ATSIF_DATA_NOT_PRESENT', 22101: 'ATSIF_P1INVALID', 22102: 'ATSIF_P2INVALID', 22103: 'ATSIF_P3INVALID', 22104: 'ATSIF_P4INVALID', 22105: 'ATSIF_P5INVALID', 22106: 'ATSIF_P6INVALID', 22107: 'ATSIF_P7INVALID', 22108: 'ATSIF_P8INVALID'}</em><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ERROR_STR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.AndorSifReader.SifError.FromCode">
+<em class="property">static </em><code class="sig-name descname">FromCode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">errorCode</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/AndorSifReader.html#SifError.FromCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.FromCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts SIFReaderSDK error code to string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>errorCode</strong> (<em>int</em>) – Error code number</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Corresponding error string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.AndorSifReader.SifError.ProcessErrorCode">
+<em class="property">static </em><code class="sig-name descname">ProcessErrorCode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">errorCode</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/AndorSifReader.html#SifError.ProcessErrorCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.AndorSifReader.SifError.ProcessErrorCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes error codes, raises RuntimeError if the error code indicate
+problems. In case of success, does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>errorCode</strong> (<em>int</em>) – Error code number</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.Images">
+<span id="coldtofu-images-module"></span><h2>ColdTOFU.Images module<a class="headerlink" href="#module-ColdTOFU.Images" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="ColdTOFU.Images.FluorescenceImage">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Images.</code><code class="sig-name descname">FluorescenceImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#FluorescenceImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The main class to extract relevant information from the fluorescence image
+sequences that are obtained in the experiment. The multiple image sequence
+consists of fluorescence signal image and a background image acquired immediately
+after the signal from the atomic cloud for as many runs of the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filePath</strong> – str, Path to the multiple-image file</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.FluorescenceImage.filePath">
+<code class="sig-name descname">filePath</code><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.filePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>str, Path to the multiple-image file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.FluorescenceImage.im">
+<code class="sig-name descname">im</code><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.im" title="Permalink to this definition">¶</a></dt>
+<dd><p>PIL.TiffImagePlugin.TiffImageFile or AndorSifFile._SifFrames</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.FluorescenceImage.n">
+<code class="sig-name descname">n</code><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>int, total number of data = number of images/3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.FluorescenceImage.frames">
+<code class="sig-name descname">frames</code><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, all the frames in the image file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.FluorescenceImage.tags">
+<code class="sig-name descname">tags</code><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict, the named tag dictionary of the TiffImage or properties of sif file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.FluorescenceImage.averagedSignal">
+<code class="sig-name descname">averagedSignal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em>, <em class="sig-param"><span class="n">truncate</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#FluorescenceImage.averagedSignal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.averagedSignal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average signal with nAveraging being the Superloop
+in the experiment and finds the fluorescence after the averaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nAveraging</strong> – <dl class="field-list simple">
+<dt class="field-odd">type</dt>
+<dd class="field-odd"><p>int, the repetitions of the experiment</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>truncate</strong> – <dl class="field-list simple">
+<dt class="field-odd">type</dt>
+<dd class="field-odd"><p>tuple or list, the super loops to be ignored.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an ndarray of length equal to Serie in the experiment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.FluorescenceImage.fluorescence">
+<code class="sig-name descname">fluorescence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xSpan</span></em>, <em class="sig-param"><span class="n">ySpan</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#FluorescenceImage.fluorescence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.fluorescence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fluorence calculated from the FluorencenceImage as an ndarray.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xSpan</strong> – a list containing the range of pixels of the image in x direction.</p></li>
+<li><p><strong>ySpan</strong> – a list containing the range of pixels of the image in y direction.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.FluorescenceImage.images">
+<code class="sig-name descname">images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#FluorescenceImage.images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the images present in the multiple image file as an ndarray.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.FluorescenceImage.plotAveragedSignal">
+<code class="sig-name descname">plotAveragedSignal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em>, <em class="sig-param"><span class="n">ROI</span></em>, <em class="sig-param"><span class="n">truncate</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#FluorescenceImage.plotAveragedSignal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.FluorescenceImage.plotAveragedSignal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates and plots the average signal with nAveraging being the Superloop
+in the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="ColdTOFU.Images.ShadowImage">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Images.</code><code class="sig-name descname">ShadowImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The main class to extract relevant information from the shadow imaging
+sequences that are obtained in the experiment. The multiple image sequence
+consists of the shadow or the absorption image, image of the incident probe
+and the image of the background for as many runs of the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filePath</strong> – str, Path to the multiple-image file</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.filePath">
+<code class="sig-name descname">filePath</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.filePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>str, Path to the multiple-image file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.ext">
+<code class="sig-name descname">ext</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>str, extension of the image file passed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.im">
+<code class="sig-name descname">im</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.im" title="Permalink to this definition">¶</a></dt>
+<dd><p>PIL.TiffImagePlugin.TiffImageFile or AndorSifFile._SifFrames</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.n">
+<code class="sig-name descname">n</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.n" title="Permalink to this definition">¶</a></dt>
+<dd><p>int, total number of data = number of images/3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.frames">
+<code class="sig-name descname">frames</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, all the frames in the image file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.tags">
+<code class="sig-name descname">tags</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict, the named tag dictionary of the TiffImage or properties of sif file</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.transmission">
+<code class="sig-name descname">transmission</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.transmission" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, All the transmission images after
+subtracting the background</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.incidence">
+<code class="sig-name descname">incidence</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.incidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, All the images of incident probe after
+subtracting the background</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.OD">
+<code class="sig-name descname">OD</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.OD" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, optical depth all the runs of the experiment calculated from
+the transmission and incidence</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.ODaveraged">
+<code class="sig-name descname">ODaveraged</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.ODaveraged" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, OD averaged with averaging like a superloop</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.averagedOD">
+<code class="sig-name descname">averagedOD</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.averagedOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, OD of the averaged signal with averaging on superloop</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.ShadowImage.averagedOD2">
+<code class="sig-name descname">averagedOD2</code><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.averagedOD2" title="Permalink to this definition">¶</a></dt>
+<dd><p>ndarray, OD of the averaged signal with averaging on loop</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.averagedSignalOD">
+<code class="sig-name descname">averagedSignalOD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em>, <em class="sig-param"><span class="n">truncate</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.averagedSignalOD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.averagedSignalOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average signal with nAveraging being the Superloop
+in the experiment and finds the optical depth after the averaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nAveraging</strong> – int, number of averaging to be used.</p></li>
+<li><p><strong>truncate</strong> – tuple or list, the superloops to be ignored while averaging. Default is ().</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an ndarray of length equal to Serie in the experiment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.averagedSignalOD2">
+<code class="sig-name descname">averagedSignalOD2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em>, <em class="sig-param"><span class="n">truncate</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.averagedSignalOD2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.averagedSignalOD2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average signal with nAveraging being the loops
+in the experiment and finds the optical depth after the averaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nAveraging</strong> – int, number of averaging to be used.</p></li>
+<li><p><strong>truncate</strong> – tuple or list, the superloops to be ignored while averaging. Default is ().</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an ndarray of length equal to Serie in the experiment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.blueProbeIntensity">
+<code class="sig-name descname">blueProbeIntensity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ROI</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.blueProbeIntensity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.blueProbeIntensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimates blue probe intensity and power from the reference image using the losses in imaging system
+and quantum effeiciency of the camera for red light. rcParams used in calculating the intensity are
+<code class="docutils literal notranslate"><span class="pre">quantum</span> <span class="pre">efficiency</span></code>, <code class="docutils literal notranslate"><span class="pre">pixelSize</span></code>, <code class="docutils literal notranslate"><span class="pre">binning</span></code> and <code class="docutils literal notranslate"><span class="pre">magnification</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ROI</strong> – list, ROI in which to estimate the intensity.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>intensity (<span class="math notranslate nohighlight">\(\mu W/cm^2\)</span>) and power (<span class="math notranslate nohighlight">\(\mu W\)</span>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.comment">
+<code class="sig-name descname">comment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">comment</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.comment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds comment to the tif image under the ImageDescription tag
+and replaces it silently with the new image, if the user has the
+permissions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>comment</strong> – str, comment to be added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.description">
+<code class="sig-name descname">description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.description"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.description" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the ImageDescription tag of the tiff image file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.images">
+<code class="sig-name descname">images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the images present in the ShadowImage object as an ndarray.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.opticalDepth">
+<code class="sig-name descname">opticalDepth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xSpan</span></em>, <em class="sig-param"><span class="n">ySpan</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.opticalDepth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.opticalDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the optical depth calculated from the ShadowImage as an ndarray.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xSpan</strong> – list, containing the range of pixels of the image in x direction.</p></li>
+<li><p><strong>ySpan</strong> – list, containing the range of pixels of the image in y direction.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.opticalDepthAveraged">
+<code class="sig-name descname">opticalDepthAveraged</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.opticalDepthAveraged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.opticalDepthAveraged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the optical depth from every triad of the images and
+the take average with nAveraging as the Superloop in the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nAveraging</strong> – int, number of averaging to be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an ndarray of length equal to Serie in the experiment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.plotAveragedSignalOD">
+<code class="sig-name descname">plotAveragedSignalOD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAveraging</span></em>, <em class="sig-param"><span class="n">ROI</span></em>, <em class="sig-param"><span class="n">truncate</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.plotAveragedSignalOD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.plotAveragedSignalOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates and plots the average signal with nAveraging being the Superloop
+in the experiment and finds the optical depth after the averaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nAveraging</strong> – int, number of averaging to be used.</p></li>
+<li><p><strong>ROI</strong> – list, ROI in the images to be plotted.</p></li>
+<li><p><strong>truncate</strong> – tuple or list, the superloops to be ignored while averaging. Default is ().</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.ShadowImage.redProbeIntensity">
+<code class="sig-name descname">redProbeIntensity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ROI</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#ShadowImage.redProbeIntensity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.ShadowImage.redProbeIntensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimates red probe intensity and power from the reference image using the losses in imaging system
+and quantum effeiciency of the camera for red light. rcParams used in calculating the intensity are
+<code class="docutils literal notranslate"><span class="pre">quantum</span> <span class="pre">efficiency</span></code>, <code class="docutils literal notranslate"><span class="pre">pixelSize</span></code>, <code class="docutils literal notranslate"><span class="pre">binning</span></code> and <code class="docutils literal notranslate"><span class="pre">magnification</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ROI</strong> – list, ROI in which to estimate the intensity.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>intensity (<span class="math notranslate nohighlight">\(\mu W/cm^2\)</span>) and power (<span class="math notranslate nohighlight">\(\mu W\)</span>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="ColdTOFU.Images.rcParams">
+<em class="property">class </em><code class="sig-prename descclassname">ColdTOFU.Images.</code><code class="sig-name descname">rcParams</code><a class="reference internal" href="_modules/ColdTOFU/Images.html#rcParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.rcParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that is designed to read and update resource parameters of the package. These parameters are usually the
+hardware parameters that are used while converting certain digital values to real units. Currently these are
+imaging parameters like magnification, pixel size etc. The idea behind this is that once these parameters are set,
+these are used by many function and classes throughout the package without having to explicitly pass them. Open
+the file rcParams.json using the notepad to see the current parameters used throughout the library.</p>
+<dl class="py attribute">
+<dt id="ColdTOFU.Images.rcParams.params">
+<code class="sig-name descname">params</code><a class="headerlink" href="#ColdTOFU.Images.rcParams.params" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict, current parameters used by the package</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ColdTOFU.Images.rcParams.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/Images.html#rcParams.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.Images.rcParams.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method to update the rcParams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – string, key of the parameter. Careful about the spelling of the key. If its wrong,
+then you will add another parameter with the wrong spelling instead of updating the
+desired parameter.</p></li>
+<li><p><strong>value</strong> – value of the parameter to update.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.fits">
+<span id="coldtofu-fits-module"></span><h2>ColdTOFU.fits module<a class="headerlink" href="#module-ColdTOFU.fits" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.fits.gaussian">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">sigma_x</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#gaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.gaussian2D">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">yo</span></em>, <em class="sig-param"><span class="n">sigma_x</span></em>, <em class="sig-param"><span class="n">sigma_y</span></em>, <em class="sig-param"><span class="n">theta</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#gaussian2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.gaussian2DFit">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian2DFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#gaussian2DFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian2DFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits an image with a 2D gaussian.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – numpy ndarray</p></li>
+<li><p><strong>p0</strong> – ndarray, initial guess for the fit params in the form of
+[amplitude, xo, yo, sigma_x, sigma_y, theta, offset].
+Default None (fits for OD images).</p></li>
+<li><p><strong>bounds</strong> – tuple of lower bound and upper bound for the fit.
+Default None (fits for OD images)</p></li>
+<li><p><strong>plot</strong> – bool to show the plot of the fit. Default True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>optimized parameters in the same order as p0
+pCov: covarience parameters of the fit.
+Read scipy.optimize.curve_fit for details.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pOpt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.gaussianFit">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussianFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#gaussianFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussianFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the given array to an 1D-gaussian.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 1darray, the argument values of the gaussian</p></li>
+<li><p><strong>array</strong> – 1darray, the data to fit to the gaussian</p></li>
+<li><p><strong>p0</strong> – ndarray, initial guess for the fit params in the form of
+[amplitude, xo, sigma, offset]. Default is None.</p></li>
+<li><p><strong>bounds</strong> – tuple of lower bound and upper bound for the fit.
+Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>optimized parameters in the same order as p0
+pCov: covarience parameters of the fit.
+Read scipy.optimize.curve_fit for details.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pOpt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.lorentzian">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">gamma</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#lorentzian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.lorentzianFit">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzianFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#lorentzianFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzianFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits the given array to a Lorentzian.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> – 1darray, the data to fit to the lorentzian</p></li>
+<li><p><strong>p0</strong> – ndarray, initial guess for the fit params in the form of
+[amplitude, xo, gamma, offset]. Default is None.</p></li>
+<li><p><strong>bounds</strong> – tuple of lower bound and upper bound for the fit.
+Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>optimized parameters in the same order as p0
+pCov: covarience parameters of the fit.
+Read scipy.optimize.curve_fit for details.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pOpt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.multipleGaussian2D">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">multipleGaussian2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#multipleGaussian2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.multipleGaussian2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.multipleGaussian2DFit">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">multipleGaussian2DFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">p0</span></em>, <em class="sig-param"><span class="n">bounds</span></em>, <em class="sig-param"><span class="n">TOF</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cropSize</span><span class="o">=</span><span class="default_value">6</span></em>, <em class="sig-param"><span class="n">tolerence</span><span class="o">=</span><span class="default_value">0.3</span></em>, <em class="sig-param"><span class="n">logNorm</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#multipleGaussian2DFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.multipleGaussian2DFit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.threeGaussian2D">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">threeGaussian2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#threeGaussian2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.threeGaussian2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.fits.threeGaussian2DFit">
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">threeGaussian2DFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">p0</span></em>, <em class="sig-param"><span class="n">bounds</span></em>, <em class="sig-param"><span class="n">TOF</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cropSize</span><span class="o">=</span><span class="default_value">6</span></em>, <em class="sig-param"><span class="n">logNorm</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/fits.html#threeGaussian2DFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.threeGaussian2DFit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.jupyterTools">
+<span id="coldtofu-jupytertools-module"></span><h2>ColdTOFU.jupyterTools module<a class="headerlink" href="#module-ColdTOFU.jupyterTools" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.jupyterTools.disp">
+<code class="sig-prename descclassname">ColdTOFU.jupyterTools.</code><code class="sig-name descname">disp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span></em>, <em class="sig-param"><span class="n">symObj</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/jupyterTools.html#disp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.jupyterTools.disp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays sympy symbolic objects in latex as an equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> – string, latex code of varaible in RHS.</p></li>
+<li><p><strong>symObj</strong> – sympy.symbol object, symbol object to be displayed in LHS.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.jupyterTools.update_progress">
+<code class="sig-prename descclassname">ColdTOFU.jupyterTools.</code><code class="sig-name descname">update_progress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span></em>, <em class="sig-param"><span class="n">clear</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/jupyterTools.html#update_progress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.jupyterTools.update_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Progress bar generated in a loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>progress</strong> – int, current index</p></li>
+<li><p><strong>clear</strong> – bool, to clear the last output of the cell. Default True</p></li>
+<li><p><strong>comment</strong> – string, description of the progress bar.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.numberOfAtoms">
+<span id="coldtofu-numberofatoms-module"></span><h2>ColdTOFU.numberOfAtoms module<a class="headerlink" href="#module-ColdTOFU.numberOfAtoms" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.numberOfAtoms.numAtomsBlue">
+<code class="sig-prename descclassname">ColdTOFU.numberOfAtoms.</code><code class="sig-name descname">numAtomsBlue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/numberOfAtoms.html#numAtomsBlue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.numberOfAtoms.numAtomsBlue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates number of atoms from blue shadow imaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – a numpy.ndarray, OD from the experiment</p></li>
+<li><p><strong>delta</strong> – a float, detuning of the probe, 2*(AOMFreq-69) MHz</p></li>
+<li><p><strong>s</strong> (<em>optional</em>) – a float, saturation parameter of the probe. Default is 0.</p></li>
+<li><p><strong>plot</strong> (<em>optional</em>) – a bool, flag to plot the gaussian fits if True.
+Default is True.</p></li>
+<li><p><strong>p0</strong> (<em>optional</em>) – a list, initial guess parameters corresponding to gaussian2D function</p></li>
+<li><p><strong>bounds</strong> (<em>optional</em>) – list of lists, bounds for parameters in the form <cite>[[lower bounds], [upper bounds]]</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, <cite>(number of atoms from 2D gaussian fit,
+number of atoms from pixel sum, number density from gaussian fit,
+sigma_x, sigma_y, amplitude, x0, y0)</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.numberOfAtoms.numAtomsGeneral">
+<code class="sig-prename descclassname">ColdTOFU.numberOfAtoms.</code><code class="sig-name descname">numAtomsGeneral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">wLen</span></em>, <em class="sig-param"><span class="n">Gamma</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/numberOfAtoms.html#numAtomsGeneral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.numberOfAtoms.numAtomsGeneral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates number of atoms from blue shadow imaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – a numpy.ndarray, OD from the experiment</p></li>
+<li><p><strong>delta</strong> – a float, detuning of the probe in MHz</p></li>
+<li><p><strong>wLen</strong> – float, wavelength of the probe in nm</p></li>
+<li><p><strong>Gamma</strong> – flaot, linewidth of the excited state in MHz.</p></li>
+<li><p><strong>s</strong> (<em>optional</em>) – a float, saturation parameter of the probe. Default is 0.</p></li>
+<li><p><strong>plot</strong> (<em>optional</em>) – a bool, flag to plot the gaussian fits if True.
+Default is True.</p></li>
+<li><p><strong>p0</strong> (<em>optional</em>) – a list, initial guess parameters corresponding to gaussian2D function</p></li>
+<li><p><strong>bounds</strong> (<em>optional</em>) – list of lists, bounds for parameters in the form <cite>[[lower bounds], [upper bounds]]</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, <cite>(number of atoms from 2D gaussian fit,
+number of atoms from pixel sum, number density from gaussian fit,
+sigma_x, sigma_y, amplitude, x0, y0)</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.numberOfAtoms.numAtomsRed">
+<code class="sig-prename descclassname">ColdTOFU.numberOfAtoms.</code><code class="sig-name descname">numAtomsRed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span></em>, <em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/numberOfAtoms.html#numAtomsRed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.numberOfAtoms.numAtomsRed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates number of atoms from red shadow imaging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – a numpy.ndarray, OD from the experiment</p></li>
+<li><p><strong>delta</strong> – float, detuning of the probe in kHz</p></li>
+<li><p><strong>s</strong> (<em>optional</em>) – a float, saturation parameter of the probe. Default is 0.</p></li>
+<li><p><strong>plot</strong> (<em>optional</em>) – a bool, a flag to plot the gaussian fits if True.
+Default is True.</p></li>
+<li><p><strong>p0</strong> (<em>optional</em>) – a list, initial guess parameters corresponding to gaussian2D function</p></li>
+<li><p><strong>bounds</strong> (<em>optional</em>) – list of lists, bounds for parameters in the form <cite>[[lower bounds], [upper bounds]]</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, <cite>(number of atoms from 2D gaussian fit,
+number of atoms from pixel sum, number density from gaussian fit,
+sigma_x, sigma_y, amplitude, x0, y0)</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.numberOfAtoms.temperature">
+<code class="sig-prename descclassname">ColdTOFU.numberOfAtoms.</code><code class="sig-name descname">temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sizes</span></em>, <em class="sig-param"><span class="n">timeStamps</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/numberOfAtoms.html#temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.numberOfAtoms.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates temperature of the cold gas given size of the cloud at various times of flight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sizes</strong> – 2D array, sizes of the cloud extracted from gaussian2D fit in pixel units.
+Eg: ([[x1, y1], [x2, y2], [x3, y3]])</p></li>
+<li><p><strong>timeStamps</strong> – array, corresponding times of flight in s.</p></li>
+<li><p><strong>plot</strong> – bool, to plot <span class="math notranslate nohighlight">\(v^2\)</span> vs <span class="math notranslate nohighlight">\(TOF^2\)</span>. Default:True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, (temperature in K along x, temperature in K along y)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.picoMatTools">
+<span id="coldtofu-picomattools-module"></span><h2>ColdTOFU.picoMatTools module<a class="headerlink" href="#module-ColdTOFU.picoMatTools" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.picoMatTools.PSD">
+<code class="sig-prename descclassname">ColdTOFU.picoMatTools.</code><code class="sig-name descname">PSD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">avg</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">channels</span><span class="o">=</span><span class="default_value">['A']</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/picoMatTools.html#PSD"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.picoMatTools.PSD" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Reads multiple waveforms .mat files folder exported using picoscope software and</dt><dd><p>alculates power spectral density (PSD).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – string, path of the folder to read.</p></li>
+<li><p><strong>avg</strong> – int, number of waveforms in the folder to average.</p></li>
+<li><p><strong>channels</strong> – list of strings, channels of the file to read. Ex: <cite>[‘A’, ‘B’]</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a touple, (frequencies array, list of PSD arrays in the order of channels)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.picoMatTools.RIN">
+<code class="sig-prename descclassname">ColdTOFU.picoMatTools.</code><code class="sig-name descname">RIN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">avg</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">channel</span><span class="o">=</span><span class="default_value">'A'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/picoMatTools.html#RIN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.picoMatTools.RIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads multiple waveforms .mat files folder exported using picoscope software and
+calculates relative intensity noise (RIN).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – string, path of the folder to read.</p></li>
+<li><p><strong>avg</strong> – int, number of waveforms in the folder to average.</p></li>
+<li><p><strong>channels</strong> – list of strings, channels of the file to read. Ex: <cite>[‘A’, ‘B’]</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a touple, (frequencies array, list of RIN arrays in the order of channels)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.picoMatTools.picoMatRead">
+<code class="sig-prename descclassname">ColdTOFU.picoMatTools.</code><code class="sig-name descname">picoMatRead</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em>, <em class="sig-param"><span class="n">channels</span><span class="o">=</span><span class="default_value">['A']</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/picoMatTools.html#picoMatRead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.picoMatTools.picoMatRead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads .mat files exported using picoscope software.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filePath</strong> – string, path of the file to read.</p></li>
+<li><p><strong>channels</strong> – list of strings, channels of the file to read. Ex: <cite>[‘A’, ‘B’]</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a touple, (time array, list of data arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.sigma">
+<span id="coldtofu-sigma-module"></span><h2>ColdTOFU.sigma module<a class="headerlink" href="#module-ColdTOFU.sigma" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.sigma.sigmaBlue">
+<code class="sig-prename descclassname">ColdTOFU.sigma.</code><code class="sig-name descname">sigmaBlue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/sigma.html#sigmaBlue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.sigma.sigmaBlue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the scattering cross-section of Sr for <span class="math notranslate nohighlight">\(^1S_0 \rightarrow ^1P_1\)</span> taking into
+account the isotope shift w.r.t. A=88 isotope and hyperfine levels present
+in the excited state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delta</strong> – float, detuning of the probe w.r.t the reference in MHz.</p></li>
+<li><p><strong>s</strong> – float, saturation parameter of the probe, <span class="math notranslate nohighlight">\(I/I_s\)</span>.</p></li>
+<li><p><strong>A</strong> – int, mass number of the isotope.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float, Scattering cross-section.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Comment:</dt><dd><p>All frequencies are in MHz.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.sigma.sigmaGeneral">
+<code class="sig-prename descclassname">ColdTOFU.sigma.</code><code class="sig-name descname">sigmaGeneral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">wLen</span></em>, <em class="sig-param"><span class="n">Gamma</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/sigma.html#sigmaGeneral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.sigma.sigmaGeneral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the scattering cross-section of a two-level atom with a weak probe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delta</strong> – float, detuning of the probe w.r.t the reference in MHz.</p></li>
+<li><p><strong>wLen</strong> – float, wavelength of the probe in nm</p></li>
+<li><p><strong>Gamma</strong> – flaot, linewidth of the excited state in MHz.</p></li>
+<li><p><strong>s</strong> – float, saturation parameter of the probe, <span class="math notranslate nohighlight">\(I/I_s\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float, Scattering cross-section.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Comment:</dt><dd><p>All frequencies are in MHz.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.sigma.sigmaRed">
+<code class="sig-prename descclassname">ColdTOFU.sigma.</code><code class="sig-name descname">sigmaRed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delta</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/sigma.html#sigmaRed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.sigma.sigmaRed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the scattering cross-section of Sr for <span class="math notranslate nohighlight">\(^1S_0 \rightarrow ^3P_1\)</span> taking saturation
+into account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delta</strong> – float, detuning of the probe w.r.t the reference in kHz.</p></li>
+<li><p><strong>s</strong> – float, saturation parameter of the probe, <span class="math notranslate nohighlight">\(I/I_s\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float, Scattering cross-section.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Comment:</dt><dd><p>All frequencies are in kHz.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU.spectrum">
+<span id="coldtofu-spectrum-module"></span><h2>ColdTOFU.spectrum module<a class="headerlink" href="#module-ColdTOFU.spectrum" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ColdTOFU.spectrum.bv">
+<code class="sig-prename descclassname">ColdTOFU.spectrum.</code><code class="sig-name descname">bv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">f0</span></em>, <em class="sig-param"><span class="n">b0</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/spectrum.html#bv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.spectrum.bv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function representing convolution of the lorentzian line shape of the red transition and gaussian maxwell
+distribution. This is taken from 5.13 from Chang chi’s thesis and added the effect of saturation parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> – numpy.array, frequency vector</p></li>
+<li><p><strong>f0</strong> – float, resonance frequency or centre of the spectrum</p></li>
+<li><p><strong>b0</strong> – float, optical depth at resonance at zero temperature</p></li>
+<li><p><strong>T</strong> – float, temperature in micro K</p></li>
+<li><p><strong>s</strong> – float, saturation parameter of the probe, <span class="math notranslate nohighlight">\(I/I_s\)</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>optical depth for frequencies f in the shape f.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.spectrum.bvFit">
+<code class="sig-prename descclassname">ColdTOFU.spectrum.</code><code class="sig-name descname">bvFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/spectrum.html#bvFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.spectrum.bvFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to fit spectroscopy data to real line shape of the transition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> – numpy.array, frequency vector</p></li>
+<li><p><strong>array</strong> – float, optical depth at scan frequencies f</p></li>
+<li><p><strong>p0</strong> – initial guess for the fit as [f_0, b_0, T (in <span class="math notranslate nohighlight">\(\mu K\)</span>), s]</p></li>
+<li><p><strong>bounds</strong> – bounds for the fit as ([lower bounds], [upper bounds])</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(pOpt, pCov)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>a tuple with optimized parameters and covariance ex</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.spectrum.spectroscopy">
+<code class="sig-prename descclassname">ColdTOFU.spectrum.</code><code class="sig-name descname">spectroscopy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ODimages</span></em>, <em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">d</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">loss</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">fileNum</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">savefig</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/spectrum.html#spectroscopy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.spectrum.spectroscopy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the OD of the pixels around the centre and uses the sum to plot the spectrum of the scan
+corresponding to the given frequencies. This is then fit to a lorentzian to find the center and linewidth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ODimages</strong> – ODimages extracted from ShadowImaging sequences</p></li>
+<li><p><strong>f</strong> – array of frequencies for which the scan is done</p></li>
+<li><p><strong>d</strong> – int, to specify size of the image area to consider around the centre of OD</p></li>
+<li><p><strong>plot</strong> – bool, default is True to specify if the data has to be plotted</p></li>
+<li><p><strong>fileNum</strong> – string, file number (plus any additional description) of the image file for which the analysis is done.</p></li>
+<li><p><strong>savefig</strong> – bool, default is False. Change it to true if you want to save the spectrum as .png</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, (amp, centre, gamma, offset) of the lorentzian fit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ColdTOFU.spectrum.spectroscopyFaddeva">
+<code class="sig-prename descclassname">ColdTOFU.spectrum.</code><code class="sig-name descname">spectroscopyFaddeva</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ODimages</span></em>, <em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">imaging_params</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">atom_loss</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">fileNum</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">savefig</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ColdTOFU/spectrum.html#spectroscopyFaddeva"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.spectrum.spectroscopyFaddeva" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits od images to a gaussian and uses its amplitude to plot the spectrum of the scan
+corresponding to the given frequencies. This is fit to <span class="math notranslate nohighlight">\(b_v(\delta)\)</span> from Chang Chi’s thesis to extract
+temperature in addition to center.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ODimages</strong> – ODimages extracted from ShadowImaging sequences</p></li>
+<li><p><strong>f</strong> – array of frequencies for which the scan is done</p></li>
+<li><p><strong>imaging_params</strong> – a dictionary with keys as follows
+ex: {‘binning’:2, ‘magnification’: 2.2, ‘pixelSize’: 16*micro, ‘saturation’: 1 }</p></li>
+<li><p><strong>plot</strong> – bool, default is True to specify if the data has to be plotted</p></li>
+<li><p><strong>fileNum</strong> – string, file number (plus any additional description) of the image file for which the analysis is done.</p></li>
+<li><p><strong>savefig</strong> – bool, default is False. Change it to true if you want to save the spectrum as .png</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple, (centre, <span class="math notranslate nohighlight">\(b_0\)</span>, T, s) of fit to <span class="math notranslate nohighlight">\(b_v(\delta)\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ColdTOFU">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ColdTOFU" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ColdTOFU.Physics.html" class="btn btn-neutral float-right" title="ColdTOFU.Physics package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="ColdTOFU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Chetan Sriram Madasu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

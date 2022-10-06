@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ColdTOFU.numberOfAtoms &mdash; ColdTOFU 0.0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> ColdTOFU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">ColdTOFU</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ColdTOFU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>ColdTOFU.numberOfAtoms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ColdTOFU.numberOfAtoms</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">.Images</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">.sigma</span> <span class="kn">import</span> <span class="n">sigmaBlue</span><span class="p">,</span> <span class="n">sigmaRed</span><span class="p">,</span> <span class="n">sigmaGeneral</span>
+<span class="kn">from</span> <span class="nn">.fits</span> <span class="kn">import</span> <span class="n">gaussian2DFit</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="o">*</span>
+
+<div class="viewcode-block" id="numAtomsGeneral"><a class="viewcode-back" href="../../ColdTOFU.html#ColdTOFU.numberOfAtoms.numAtomsGeneral">[docs]</a><span class="k">def</span> <span class="nf">numAtomsGeneral</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">wLen</span><span class="p">,</span> <span class="n">Gamma</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(),</span> <span class="p">()]):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculates number of atoms from blue shadow imaging.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        image: a numpy.ndarray, OD from the experiment</span>
+<span class="sd">        delta: a float, detuning of the probe in MHz</span>
+<span class="sd">        wLen: float, wavelength of the probe in nm</span>
+<span class="sd">        Gamma: flaot, linewidth of the excited state in MHz.</span>
+<span class="sd">        s (optional): a float, saturation parameter of the probe. Default is 0.</span>
+<span class="sd">        plot (optional): a bool, flag to plot the gaussian fits if True.</span>
+<span class="sd">            Default is True.</span>
+<span class="sd">        p0 (optional): a list, initial guess parameters corresponding to gaussian2D function</span>
+<span class="sd">        bounds (optional): list of lists, bounds for parameters in the form `[[lower bounds], [upper bounds]]`.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        a tuple, `(number of atoms from 2D gaussian fit,</span>
+<span class="sd">        number of atoms from pixel sum, number density from gaussian fit,</span>
+<span class="sd">        sigma_x, sigma_y, amplitude, x0, y0)`</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">scat</span> <span class="o">=</span> <span class="n">sigmaGeneral</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">wLen</span><span class="p">,</span> <span class="n">Gamma</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">pOpt</span><span class="p">,</span> <span class="n">pCov</span> <span class="o">=</span> <span class="n">gaussian2DFit</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+    <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">pOpt</span>
+    <span class="n">imaging_params</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">()</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">pixelSize</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;pixelSize&#39;</span><span class="p">]</span>
+    <span class="n">magnification</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;magnification&#39;</span><span class="p">]</span>
+    <span class="n">binning</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;binning&#39;</span><span class="p">]</span>
+    <span class="n">NGaussian</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">amp</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="c1">#NIntegrate = integrate.simps(integrate.simps(image))*(pixelSize*binning/magnification)**2/scat</span>
+    <span class="n">NPixel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="n">Ndensity</span> <span class="o">=</span> <span class="n">NGaussian</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">NGaussian</span><span class="p">,</span> <span class="n">NPixel</span><span class="p">,</span> <span class="n">Ndensity</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span></div>
+
+<div class="viewcode-block" id="numAtomsBlue"><a class="viewcode-back" href="../../ColdTOFU.html#ColdTOFU.numberOfAtoms.numAtomsBlue">[docs]</a><span class="k">def</span> <span class="nf">numAtomsBlue</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(),</span> <span class="p">()]):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculates number of atoms from blue shadow imaging.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        image: a numpy.ndarray, OD from the experiment</span>
+<span class="sd">        delta: a float, detuning of the probe, 2*(AOMFreq-69) MHz</span>
+<span class="sd">        s(optional): a float, saturation parameter of the probe. Default is 0.</span>
+<span class="sd">        plot(optional): a bool, flag to plot the gaussian fits if True.</span>
+<span class="sd">            Default is True.</span>
+<span class="sd">        p0 (optional): a list, initial guess parameters corresponding to gaussian2D function</span>
+<span class="sd">        bounds (optional): list of lists, bounds for parameters in the form `[[lower bounds], [upper bounds]]`.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        a tuple, `(number of atoms from 2D gaussian fit,</span>
+<span class="sd">        number of atoms from pixel sum, number density from gaussian fit,</span>
+<span class="sd">        sigma_x, sigma_y, amplitude, x0, y0)`</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">scat</span> <span class="o">=</span> <span class="n">sigmaBlue</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">pOpt</span><span class="p">,</span> <span class="n">pCov</span> <span class="o">=</span> <span class="n">gaussian2DFit</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+    <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">pOpt</span>
+    <span class="n">imaging_params</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">()</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">pixelSize</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;pixelSize&#39;</span><span class="p">]</span>
+    <span class="n">magnification</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;magnification&#39;</span><span class="p">]</span>
+    <span class="n">binning</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;binning&#39;</span><span class="p">]</span>
+    <span class="n">NGaussian</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">amp</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="c1">#NIntegrate = integrate.simps(integrate.simps(image))*(pixelSize*binning/magnification)**2/scat</span>
+    <span class="n">NPixel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="n">Ndensity</span> <span class="o">=</span> <span class="n">NGaussian</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">NGaussian</span><span class="p">,</span> <span class="n">NPixel</span><span class="p">,</span> <span class="n">Ndensity</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span></div>
+
+<div class="viewcode-block" id="numAtomsRed"><a class="viewcode-back" href="../../ColdTOFU.html#ColdTOFU.numberOfAtoms.numAtomsRed">[docs]</a><span class="k">def</span> <span class="nf">numAtomsRed</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">p0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">bounds</span><span class="o">=</span><span class="p">[(),</span> <span class="p">()]):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates number of atoms from red shadow imaging.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        image: a numpy.ndarray, OD from the experiment</span>
+<span class="sd">        delta: float, detuning of the probe in kHz</span>
+<span class="sd">        s(optional): a float, saturation parameter of the probe. Default is 0.</span>
+<span class="sd">        plot(optional): a bool, a flag to plot the gaussian fits if True.</span>
+<span class="sd">            Default is True.</span>
+<span class="sd">        p0 (optional): a list, initial guess parameters corresponding to gaussian2D function</span>
+<span class="sd">        bounds (optional): list of lists, bounds for parameters in the form `[[lower bounds], [upper bounds]]`.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        a tuple, `(number of atoms from 2D gaussian fit,</span>
+<span class="sd">        number of atoms from pixel sum, number density from gaussian fit,</span>
+<span class="sd">        sigma_x, sigma_y, amplitude, x0, y0)`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scat</span> <span class="o">=</span> <span class="n">sigmaRed</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">pOpt</span><span class="p">,</span> <span class="n">pCov</span> <span class="o">=</span> <span class="n">gaussian2DFit</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+    <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">pOpt</span>
+    <span class="n">imaging_params</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">()</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">pixelSize</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;pixelSize&#39;</span><span class="p">]</span>
+    <span class="n">magnification</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;magnification&#39;</span><span class="p">]</span>
+    <span class="n">binning</span> <span class="o">=</span> <span class="n">imaging_params</span><span class="p">[</span><span class="s1">&#39;binning&#39;</span><span class="p">]</span>
+    <span class="n">NGaussian</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">amp</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="c1">#NIntegrate = integrate.simps(integrate.simps(image))*(pixelSize*binning/magnification)**2/scat</span>
+    <span class="n">NPixel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">scat</span>
+    <span class="n">Ndensity</span> <span class="o">=</span> <span class="n">NGaussian</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">sigma_x</span><span class="o">*</span><span class="n">sigma_y</span><span class="o">*</span><span class="p">(</span><span class="n">pixelSize</span><span class="o">*</span><span class="n">binning</span><span class="o">/</span><span class="n">magnification</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">NGaussian</span><span class="p">,</span> <span class="n">NPixel</span><span class="p">,</span> <span class="n">Ndensity</span><span class="p">,</span> <span class="n">sigma_x</span><span class="p">,</span> <span class="n">sigma_y</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span></div>
+
+
+<div class="viewcode-block" id="temperature"><a class="viewcode-back" href="../../ColdTOFU.html#ColdTOFU.numberOfAtoms.temperature">[docs]</a><span class="k">def</span> <span class="nf">temperature</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">timeStamps</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculates temperature of the cold gas given size of the cloud at various times of flight.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        sizes: 2D array, sizes of the cloud extracted from gaussian2D fit in pixel units.</span>
+<span class="sd">            Eg: ([[x1, y1], [x2, y2], [x3, y3]])</span>
+<span class="sd">        timeStamps: array, corresponding times of flight in s.</span>
+<span class="sd">        plot: bool, to plot :math:`v^2` vs :math:`TOF^2`. Default:True.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        a tuple, (temperature in K along x, temperature in K along y)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">()</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">factor</span> <span class="o">=</span> <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;pixelSize&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;binning&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;magnification&#39;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">vxSqFit</span><span class="p">,</span> <span class="n">intx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">timeStamps</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">factor</span> <span class="o">*</span> <span class="p">(</span><span class="n">sizes</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">vySqFit</span><span class="p">,</span> <span class="n">inty</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">timeStamps</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">factor</span> <span class="o">*</span> <span class="p">(</span><span class="n">sizes</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">timeStamps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">timeStamps</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">Tx</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;mass number&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">m_p</span> <span class="o">*</span> <span class="n">vxSqFit</span> <span class="o">/</span> <span class="n">k</span>
+    <span class="n">Ty</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;mass number&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">m_p</span> <span class="o">*</span> <span class="n">vySqFit</span> <span class="o">/</span> <span class="n">k</span>
+    <span class="k">if</span> <span class="n">plot</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">timeStamps</span><span class="p">[:]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="n">sizes</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">factor</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">12</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">timeStamps</span><span class="p">[:]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="n">sizes</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">factor</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">12</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="p">((</span><span class="n">vxSqFit</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">tt</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">intx</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">12</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$T_x = </span><span class="si">{:.3f}</span><span class="s1">\mu K$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Tx</span><span class="o">/</span><span class="mf">1e-6</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="p">((</span><span class="n">vySqFit</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">tt</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">inty</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">12</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$T_y = </span><span class="si">{:.3f}</span><span class="s1">\mu K$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Ty</span><span class="o">/</span><span class="mf">1e-6</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$(TOF (ms))^2$&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$(\sigma (\mu m))^2$&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">Tx</span><span class="p">,</span> <span class="n">Ty</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Chetan Sriram Madasu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

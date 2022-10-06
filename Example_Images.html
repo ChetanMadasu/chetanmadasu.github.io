@@ -14262,7 +14262,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">analysis</span> <span class="kn">import</span> <span class="n">ShadowImage</span><span class="p">,</span> <span class="n">FluorescenceImage</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ColdTOFU</span> <span class="kn">import</span> <span class="n">ShadowImage</span><span class="p">,</span> <span class="n">FluorescenceImage</span><span class="p">,</span> <span class="n">rcParams</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -14278,7 +14278,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Shadow-Imaging">Shadow Imaging<a class="anchor-link" href="#Shadow-Imaging">&#182;</a></h1><p>Shadow imaging, also known as absorption imaging, is a commonly used imaging used in cold atoms research to estimate number of atoms and characterize the atomic sample's temperature and size. In this imaging sequence, we take three images for every measurement. First is the absorption image where a quasi resonant probe laser is shone at the atoms and transmission is recorded. The second image is the reference image of the probe laser. The third image is a background image to account for the stray light in the lab. The background image is subtracted from the first two and optical depth (OD) in the image plane is calculated using Lambert-Beer's law
 $$ I_t(x, y) = I_0(x, y)e^{-OD(x, y)}$$ 
-where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the incident probe intensity) and transmitted intensity, respectively. The class <code>ShadowImage(pathOfImage)</code> provides interface between standard multi-frame image files like widely used .tiff image files and proprietary .sif image file acquired with Andor Cameras. It provides methods to access image frames and extract OD, incident probe image, probe intensity etc. See <a href="https://chetanmadasu.github.io/AnalysisProject/html/index.html">documentation</a> for all the available methods. In the following code, an example usage of <code>ShadowImage</code> class is demonstrated.</p>
+where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the incident probe intensity) and transmitted intensity, respectively. The class <code>ShadowImage(pathOfImage)</code> provides interface between standard multi-frame image files like widely used .tiff image files and proprietary .sif image file acquired with Andor Cameras. It provides methods to access image frames and extract OD, incident probe image, probe intensity etc. See <a href="https://chetanmadasu.github.io/ColdTOFU/html/index.html">documentation</a> for all the available methods. In the following code, an example usage of <code>ShadowImage</code> class is demonstrated.</p>
 
 </div>
 </div>
@@ -14386,7 +14386,7 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">im</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rcParams</span><span class="p">()</span><span class="o">.</span><span class="n">params</span>
 </pre></div>
 
      </div>
@@ -14408,56 +14408,11 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;No description to show!&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read the tags of the tiff image files</span>
-<span class="n">im</span><span class="o">.</span><span class="n">tags</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;ImageWidth&#39;: (480,),
- &#39;ImageLength&#39;: (224,),
- &#39;BitsPerSample&#39;: (16,),
- &#39;Compression&#39;: (1,),
- &#39;PhotometricInterpretation&#39;: (1,),
- &#39;StripOffsets&#39;: (53,),
- &#39;Software&#39;: (&#39;pco.camware File 4.10 Copyright (C) 2018 PCO&#39;,),
- &#39;SamplesPerPixel&#39;: (1,),
- &#39;RowsPerStrip&#39;: (224,),
- &#39;StripByteCounts&#39;: (215040,),
- &#39;NewSubfileType&#39;: (0,),
- &#39;unknown&#39;: b&#39;\x80\x03\x00\x00\xe6\x07\x04\x00\x05\x00\x16\x00\x11\x00,\x00/\x00|\x02\x13\x12!\x01\xe0\x01\x00\x00\xe0\x00\x00\x00PCO-PCO-PCO-PCO-PCO-PCO-PCO\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x95\x01\x00\x00\x94\x00\x00\x00\xb0\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x01\x00A\x00\x00\x16d\x00\x01\x00\x00\x00\x91bc\x00\x01\x00`\x01$\x1c\x00\x00\x00\x00\x00\x00\x02\x02\x02\x00\x80\xe7\xbd\x02D\xbb\xdb\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;}</pre>
+<pre>{&#39;binning&#39;: 2,
+ &#39;magnification&#39;: 2.07,
+ &#39;pixelSize&#39;: 6.5e-06,
+ &#39;quantum efficiency&#39;: 0.85,
+ &#39;mass number&#39;: 87}</pre>
 </div>
 
 </div>
@@ -14474,13 +14429,13 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the considered example, the time of flight is varied and the variation is repeated after all the times of flight are finished. In case where each time of flight is repeated continuously for nAveraging number of times and then the time of flight is changed to next value, use <code>averagedSignalOD2()</code> method to extract OD with appropriate averaging.</p>
+<p>In the considered example, the time of flight is varied and the variation is repeated after all the times of flight are finished. In case where each time of flight is repeated continuously for nAveraging number of times and then the time of flight is changed to next value, use <code>averagedSignalOD2()</code> method to extract OD with appropriate averaging. Choose appropriate ROI for each time of flight using <code>ROIupdater</code> tool or by manually slicing the <code>OD</code> ndarray with ROI and proceed for the further analysis of the OD images. See <a href="https://chetanmadasu.github.io/Example_TOF_Na.html">calculation of number of atoms and temperature example</a> for example.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">OD</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">averagedSignalOD</span><span class="p">(</span><span class="n">nAveraging</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> 
@@ -14584,12 +14539,92 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">im</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+</pre></div>
+
+     </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Choose appropriate ROI for each time of flight using <code>ROIupdater</code> tool or by manually slicing the <code>OD</code> ndarray with ROI and proceed for the further analysis of the OD images. See <a href="https://chetanmadasu.github.io/Example_TOF_Na.html">calculation of number of atoms and temperature example</a> for example.</p>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;No description to show!&#39;</pre>
+</div>
 
 </div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read the tags of the tiff image files</span>
+<span class="n">im</span><span class="o">.</span><span class="n">tags</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;ImageWidth&#39;: (480,),
+ &#39;ImageLength&#39;: (224,),
+ &#39;BitsPerSample&#39;: (16,),
+ &#39;Compression&#39;: (1,),
+ &#39;PhotometricInterpretation&#39;: (1,),
+ &#39;StripOffsets&#39;: (53,),
+ &#39;Software&#39;: (&#39;pco.camware File 4.10 Copyright (C) 2018 PCO&#39;,),
+ &#39;SamplesPerPixel&#39;: (1,),
+ &#39;RowsPerStrip&#39;: (224,),
+ &#39;StripByteCounts&#39;: (215040,),
+ &#39;NewSubfileType&#39;: (0,),
+ &#39;unknown&#39;: b&#39;\x80\x03\x00\x00\xe6\x07\x04\x00\x05\x00\x16\x00\x11\x00,\x00/\x00|\x02\x13\x12!\x01\xe0\x01\x00\x00\xe0\x00\x00\x00PCO-PCO-PCO-PCO-PCO-PCO-PCO\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x95\x01\x00\x00\x94\x00\x00\x00\xb0\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x01\x00A\x00\x00\x16d\x00\x01\x00\x00\x00\x91bc\x00\x01\x00`\x01$\x1c\x00\x00\x00\x00\x00\x00\x02\x02\x02\x00\x80\xe7\xbd\x02D\xbb\xdb\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14598,7 +14633,7 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">im2</span> <span class="o">=</span> <span class="n">FluorescenceImage</span><span class="p">(</span><span class="s1">&#39;fluorescence_imag_306.sif&#39;</span><span class="p">)</span>
@@ -14676,7 +14711,7 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">im2</span><span class="o">.</span><span class="n">tags</span>
@@ -14695,7 +14730,7 @@ where $I_0(x, y)$ and $I_t(x, y)$ are the reference probe intensity (or the inci
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
