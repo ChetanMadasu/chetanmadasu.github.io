@@ -156,7 +156,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="source/ColdTOFU.rst.txt" rel="nofollow"> View page source</a>
+            <a href="sources/ColdTOFU.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -831,13 +831,46 @@ desired parameter.</p></li>
 <span id="coldtofu-fits-module"></span><h2>ColdTOFU.fits module<a class="headerlink" href="#module-ColdTOFU.fits" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="ColdTOFU.fits.gaussian">
-<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">sigma_x</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#gaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">x_0</span></em>, <em class="sig-param"><span class="n">sigma_x</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#gaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>1D Gaussian function, <span class="math notranslate nohighlight">\(f(x) = e^{\frac{-(x-x_0)^2}{2\sigma_x^2}}+offset\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 1D array, x variable of the function</p></li>
+<li><p><strong>amplitude</strong> – float, amplitude of the gaussian</p></li>
+<li><p><strong>xo</strong> – float, center of the gaussian</p></li>
+<li><p><strong>sigma_x</strong> – float, width of the gaussian</p></li>
+<li><p><strong>offset</strong> – float, constant offset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1D array, returns f(x)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt id="ColdTOFU.fits.gaussian2D">
 <code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">gaussian2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">yo</span></em>, <em class="sig-param"><span class="n">sigma_x</span></em>, <em class="sig-param"><span class="n">sigma_y</span></em>, <em class="sig-param"><span class="n">theta</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#gaussian2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.gaussian2D" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>2D Gaussian function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – np.meshgrid,</p></li>
+<li><p><strong>amplitude</strong> – float, amplitude</p></li>
+<li><p><strong>xo</strong> – float, x-center</p></li>
+<li><p><strong>yo</strong> – float, y-center</p></li>
+<li><p><strong>sigma_x</strong> – float, <span class="math notranslate nohighlight">\(sigma_1\)</span></p></li>
+<li><p><strong>sigma_y</strong> – float, <span class="math notranslate nohighlight">\(sigma_2\)</span></p></li>
+<li><p><strong>theta</strong> – float, angle of tilt</p></li>
+<li><p><strong>offset</strong> – float, offset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d array, flattened 2D array. Reshape it like (X[0], X[0][0]) to get a matrix representation of the gaussian.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt id="ColdTOFU.fits.gaussian2DFit">
@@ -879,6 +912,7 @@ Read scipy.optimize.curve_fit for details.</p>
 [amplitude, xo, sigma, offset]. Default is None.</p></li>
 <li><p><strong>bounds</strong> – tuple of lower bound and upper bound for the fit.
 Default is None.</p></li>
+<li><p><strong>plot</strong> – bool, Default is True</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -894,21 +928,22 @@ Read scipy.optimize.curve_fit for details.</p>
 
 <dl class="py function">
 <dt id="ColdTOFU.fits.lorentzian">
-<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">xo</span></em>, <em class="sig-param"><span class="n">gamma</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#lorentzian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">x_0</span></em>, <em class="sig-param"><span class="n">gamma</span></em>, <em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#lorentzian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="ColdTOFU.fits.lorentzianFit">
-<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzianFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#lorentzianFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzianFit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ColdTOFU.fits.</code><code class="sig-name descname">lorentzianFit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">p0</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">[(), ()]</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="modules/ColdTOFU/fits.html#lorentzianFit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ColdTOFU.fits.lorentzianFit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits the given array to a Lorentzian.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>array</strong> – 1darray, the data to fit to the lorentzian</p></li>
 <li><p><strong>p0</strong> – ndarray, initial guess for the fit params in the form of
-[amplitude, xo, gamma, offset]. Default is None.</p></li>
+[amplitude, xo, gamma, offset]. Default is [].</p></li>
 <li><p><strong>bounds</strong> – tuple of lower bound and upper bound for the fit.
-Default is None.</p></li>
+Default is [(), ()].</p></li>
+<li><p><strong>plot</strong> – bool, Default is True</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

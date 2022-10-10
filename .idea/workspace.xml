@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41563828-5d6b-4c67-b6f2-9bcab37a9ec6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ColdTOFU/Example_fits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_Images.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/Example_Images.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_TOF_Na.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/Example_TOF_Na.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example_ZeemanShift.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/Example_ZeemanShift.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/ColdTOFU.Physics.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/ColdTOFU.Physics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/ColdTOFU.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/ColdTOFU.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/modules.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/modules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/modules/ColdTOFU/fits.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/modules/ColdTOFU/fits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColdTOFU/html/sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ColdTOFU/html/sources/index.rst.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +49,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="L:/Ampire" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ColdTOFU" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\chetanmadasu.github.io\ColdTOFU" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="M:\chetanmadasu.github.io\ColdTOFU" />
     </key>
