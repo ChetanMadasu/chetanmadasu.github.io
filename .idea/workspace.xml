@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41563828-5d6b-4c67-b6f2-9bcab37a9ec6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Building A Michelson Interferometer Science @ NTU.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/SCPI_prompt.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/interferometer.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
