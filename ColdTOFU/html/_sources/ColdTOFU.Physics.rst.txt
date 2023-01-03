@@ -20,6 +20,14 @@ ColdTOFU.Physics.basisMatrices module
    :undoc-members:
    :show-inheritance:
 
+ColdTOFU.Physics.beams module
+-----------------------------
+
+.. automodule:: ColdTOFU.Physics.beams
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 ColdTOFU.Physics.createAndDestroy module
 ----------------------------------------
 
